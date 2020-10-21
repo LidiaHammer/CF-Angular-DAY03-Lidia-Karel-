@@ -5,10 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
   items = [];
+  clickCounter :number = 0;
   constructor() { }
 
   addToCart(product) {
     this.items.push(product);
+    this.clickCounter ++;
+    console.log(this.items)
   }
 getItems(){
   return this.items;
